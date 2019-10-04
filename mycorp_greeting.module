@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Code for the My Corp Greeting feature.
+ */
+
+include_once 'mycorp_greeting.features.inc';
+
+/**
+ * Implements hook_services_resources().
+ */
+function mycorp_greeting_services_resources() {
+  module_load_include('inc', 'mycorp_greeting', 'resources/greeting_resource');
+
+  return _greeting_resource_definition();
+}
